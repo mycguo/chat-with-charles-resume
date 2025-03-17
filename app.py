@@ -75,18 +75,5 @@ def main():
     if user_question:
         user_input(user_question)
 
-'''
-    with st.sidebar:
-        pdf_docs = st.file_uploader("Upload your resume", type=["pdf"], accept_multiple_files=True)
-        if st.button("Submit & Process"):
-            with st.spinner("Processing your resume..."):
-                if pdf_docs:
-                    text = get_pdf_text(pdf_docs)
-                    text_chunks = get_text_chunks(text)
-                    vector_store = get_vector_store(text_chunks)
-                    get_chat_chain()
-                    st.success("Resume processed successfully")
-'''
-
 if __name__ == "__main__":
     main()
